@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Invie - Las mejores guitarras</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="css/invie.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body class="precios">
+  	<header id="header" class="header background"><!--Menu -->
+  		<div class="contenedor">
+  			<figure class="logotipo"><!--Logo-->
+      			<img src="images/invie.png" widht="186" height="60" alt="Logo" />
+      		</figure>
+          <span class="burguer-button icon-menu" id="burguer-button"></span>
+      		<nav class="menu" id="menu"><!-- Elementos menu-->
+        		<ul>
+          			<li>
+            			<a href="index.html">Home</a>
+          			</li>
+          			<li>
+            			<a href="index.html#guitarras">Guitarras</a>
+          			</li>
+          			<li>
+          				<a href="precios.html">Precios</a>
+          			</li>
+        		</ul>
+      		</nav>
+  		</div>
+    </header>
+    <section class="tabla">
+      <div class="contenedor">
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>Modelo</th>
+    				<th>Precio</th>
+    				<th>Descripcion</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>Invie classic</td>
+    				<td>$1000</td>
+    				<td>Guitarra pro</td>
+            <td>Invie classic</td>
+            <td>$1000</td>
+            <td>Guitarra pro</td>
+    			</tr>
+    			<tr>
+    				<td>Invie classic</td>
+    				<td>$1000</td>
+    				<td>Guitarra pro</td>
+            <td>Invie classic</td>
+            <td>$1000</td>
+            <td>Guitarra pro</td>
+    			</tr>
+    			<tr>
+    				<td>Invie classic</td>
+    				<td>$1000</td>
+    				<td>Guitarra pro</td>
+            <td>Invie classic</td>
+            <td>$1000</td>
+            <td>Guitarra pro</td>
+    			</tr>
+    		</tbody>
+    	</table>	
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="inviewhite">
+          <a href="tel:"><strong>Teléfono</strong> <span>123456789</span></a>
+          <a href="mailto:contacto@sificoop.com"><strong>Email</strong> <span>contacto@sificoop.com</span></a>
+        </div>
+        <form class="formulario">
+          <div class="col1">
+             <label for="nombre">Nombre</label>
+             <input type="text" name="nombre" id="nombre" required/>
+             <label for="email">Email</label>
+             <input type="email" name="email" id="email" required />
+             <div class="sexo">
+               <label for="mujer">
+                 <input type="radio" name="sexo" id="mujer" > mujer
+               </label>
+               <label for="hombre">
+                 <input type="radio" name="sexo" id="hombre" > hombre
+               </label>
+             </div>
+             <div class="intereses">
+               <label for="cotizacion">
+                 <input type="checkbox" name="" id="cotizacion"> Cotizacion
+               </label>
+               <label for="reclamos">
+                 <input type="checkbox" name="" id="reclamos"> Reclamos
+               </label>
+               <label for="comentarios">
+                 <input type="checkbox" name="" id="comentarios"> Comentarios
+               </label>
+               <label for="otros">
+                 <input type="checkbox" name="" id="otros"> Otros
+               </label>
+             </div>
+          </div>
+          <div class="col2">
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            <input type="submit" name="" value="Enviar" class="button" />
+          </div>
+        </form>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      var consulta = window.matchMedia('(max-width:500px)');
+      consulta.addListener(mediaQuery);
+
+      var $burguerButton = document.getElementById('burguer-button');
+      var $menu = document.getElementById('menu');
+      function toggleMenu(){
+        $menu.classList.toggle('active');
+        $burguerButton.classList.toggle('icon-close');
+      };
+
+      function mediaQuery(){
+        if (consulta.matches){
+          $burguerButton.addEventListener('click', toggleMenu);
+        }
+        else{
+          $burguerButton.removeEventListener('click', toggleMenu);
+        }
+      }
+
+      mediaQuery(); 
+
+      var bLazy = new Blazy({
+          selector: 'img'
+      });
+
+      /*var $burguerButton = document.getElementById('burguer-button');
+      var $menu = document.getElementById('menu');*/
+
+      /*$burguerButton.addEventListener("click", function(){
+        $menu.classList.toggle('active')
+      });*/
+
+    </script>
+  </body>
+</html>
